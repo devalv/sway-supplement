@@ -67,5 +67,3 @@ else
 
     pre-commit install
 fi
-
-# TODO: install golang and golang tools
