@@ -22,16 +22,18 @@ fi
 if [ $? -eq 0 ]; then
   echo "removing old configs"
 
-#   TODO: extra paths!
-  rm -rf ~/.config/tmux/tmux.conf ~/.config/nvim ~/.config/starship.toml ~/.local/share/nvim/ ~/.cache/nvim/ ~/.config/ghostty/config
+  rm -rf $HOME/.config/starship.toml $HOME/.config/alacritty $HOME/.gitconfig $HOME/.config/nwg-bar $HOME/.config/rofi/ $HOME/.config/waybar $HOME/.config/wofi $HOME/.zshrc
 
   cd "$REPO_NAME"
 
   stow zshrc
-  stow ghostty
-  stow tmux
-  stow nvim
+  stow wofi
+  stow waybar
+  stow rofi
   stow starship
+  stow nwg-bar
+  stow git
+  stow alacritty
 
 else
   echo "Failed to clone the repository."
