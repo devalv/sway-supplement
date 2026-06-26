@@ -3,7 +3,6 @@
 
 set -e
 
-
 if [ -d "/usr/local/go" ] && command -v go >/dev/null 2>&1; then
     echo "✅ Go already installed"
     go version
