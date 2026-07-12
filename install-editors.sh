@@ -10,7 +10,7 @@ fi
 # install vscode-binary
 if ! dpkg -s code >/dev/null 2>&1; then
     sudo apt-get install wget gpg -y -q || exit 1 &&
-    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o /usr/share/keyrings/microsoft.gpg &&
+    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /usr/share/keyrings/microsoft.gpg &&
 
     sudo tee /etc/apt/sources.list.d/vscode.sources <<EOF &&
 Types: deb
