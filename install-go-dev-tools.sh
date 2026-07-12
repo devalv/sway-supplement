@@ -28,7 +28,6 @@ else
 
     # install go extra linters
     go install golang.org/x/tools/cmd/goimports@latest
-    $HOME/go/bin/goimports --help
 
     # install gofumpt
     go install mvdan.cc/gofumpt@latest
